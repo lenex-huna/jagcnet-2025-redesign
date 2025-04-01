@@ -27,12 +27,12 @@
    */
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
-  function mobileNavToogle() {
+  function mobileNavToggle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  // mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  // mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -40,7 +40,7 @@
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+        mobileNavToggle();
       }
     });
 
@@ -753,13 +753,32 @@ const menuIconContainer = document.querySelector("nav .menu-icon-container");
 
 const navContainer = document.querySelector(".nav-container");
 
+const desktopNavigator = document.querySelector(".desktop-nav");
+
+const mobileLogo = document.querySelector('.new-mobile-logo');
+
+
+
 menuIconContainer.addEventListener("click", () => {
-  console.log("you clicked me")
-  let mobileLogo = document.querySelector('.new-mobile-logo')
+
+  //let mobileLogo = document.querySelector('.new-mobile-logo');
   
-    mobileLogo.classList.toggle("active")
-  
-    navContainer.classList.toggle("active")
+  mobileLogo.classList.toggle("active");
+  navContainer.classList.toggle("active");
+
+  //desktopNavigator.classList.toggle("hidden");
+
+});
+
+// for tab navigation
+menuIconContainer.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      //let mobileLogo = document.querySelector('.new-mobile-logo');
+      mobileLogo.classList.toggle("active");
+      navContainer.classList.toggle("active");
+
+      //desktopNavigator.classList.toggle("hidden");
+    }
 });
 
 // Elements from the DOM
@@ -1001,5 +1020,64 @@ function updateSwiperTabsPagination(swiperInstance, customDots) {
   }
 
 // window.addEventListener("load", initSwiperTabs);
-initSwiperTabs()
- 
+initSwiperTabs();
+
+// event handler for detecting screen width changes for closing the mobile nav menu when screen width changes
+window.addEventListener('resize', function (e) {
+
+  //let mobileLogo = document.querySelector('.new-mobile-logo');
+
+  if (navContainer.classList.contains("active")) {
+     navContainer.classList.remove("active");
+  }
+  if (mobileLogo.classList.contains('active')) {
+     mobileLogo.classList.remove('active');
+  }
+});
+
+// event handler for when the mobile nav container detects any clicks, 
+// we ensure proper wrapping for focusable elements that are displayed
+navContainer.addEventListener('click', function (e) {
+  if (navContainer.classList.contains("active")) {
+    // wrap this first layer of menu options for wrapped tabbing, and 'hide' the submenu options from focus
+    //addFocusWrapper(navContainer);
+    }
+});
+
+// at the top level of the mobile nav, wrap the desktop-nav ul class and its li elements after the 1st li
+function addFocusWrapper(container) {
+  
+}
+
+// Enable focus locking for the 1st level menu of the mobile navigation
+document.getElementsByClassName('nine-search')[0].addEventListener('blur', function () {
+  console.log('Blur event encountered on last item');
+  if (navContainer.classList.contains("active")) { 
+    document.getElementById('tab-search').focus(); 
+  }
+});
+
+// On the mobile menu, add event listeners to all items that open up a sub-menu
+// Then we add focus-wrap functionality to each item's sub-menu
+let subMenuElems = document.getElementsByClassName('has-submenu');
+
+  for (let i = 0; i < subMenuElems.length; i++) {
+    subMenuElems[i].addEventListener('click', function () { 
+      addFocusWrap();  
+    });
+  }
+
+// For a given list, when the last list items is focused out, return focus to the first list item 
+function addFocusWrap() {
+    const lastLI = document.querySelector("body > div.nav-container.active > div:not(.hide) > div.quick-links ul li:last-child");
+    const firstLI = document.querySelector("body > div.nav-container.active > div:not(.hide) > div.quick-links ul li:first-child");
+
+    // Enable focus locking for the submenu of the mobile navigation
+    lastLI.addEventListener('focusout', function () {
+      //console.log('Blur event encountered on last item in mobile submenu');
+      firstLI.setAttribute('tabindex', '0');
+      firstLI.focus(); 
+    });
+}
+
+

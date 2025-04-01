@@ -212,6 +212,11 @@ nav .desktop-nav li span.logo-span {
  float: right;
 }
 
+/* desktop navigator on mobile */
+nav .desktop-nav.hidden {
+  /*visibility: hidden;*/
+}
+
 .col-lg-4.learn-more {
   position: relative;
 }
@@ -984,7 +989,7 @@ desktop-nav li:nth-of-type(1),
    }
     .new-mobile-logo {
       position: relative;
-      margin-top: 0px;
+      margin-top: 3px;
     }
 
     .new-mobile-logo p {
@@ -1016,6 +1021,7 @@ desktop-nav li:nth-of-type(1),
 
     .nav-container.active .desktop-nav {
         height: 100vh;
+        overflow: auto;
     }
 
     .nav-container .desktop-nav li {
@@ -1058,6 +1064,14 @@ desktop-nav li:nth-of-type(1),
         width: 100%;
         justify-content: space-between;
         list-style: none;
+
+        
+        position: sticky;
+        background-color: black;
+        margin-top: -12px;
+        width: 100%;
+        z-index: 999;
+        
         
     }
 
@@ -1177,6 +1191,8 @@ desktop-nav li:nth-of-type(1),
         transform: rotateX(90deg);
         opacity: 0;
         transition: all 600ms ease;
+
+        display: none; /*disabling search container as this functionality is not currently available*/
     }
 
      .firstmobile-search-container {
@@ -1761,6 +1777,12 @@ desktop-nav li:nth-of-type(1),
         
     }
 
+    /* The submenus for the nav options need to be scrollable on mobile */
+    .quick-links ul {
+        height: 500px;
+        overflow-y: auto;
+    }
+
     .mobile-search-container .quick-links {
        position: absolute;
        /* top: 80px; */
@@ -1782,7 +1804,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .secondmobile-search-container  .quick-links {
@@ -1794,7 +1816,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .thirdmobile-search-container  .quick-links {
@@ -1806,7 +1828,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .fourthmobile-search-container  .quick-links {
@@ -1818,7 +1840,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .fivemobile-search-container  .quick-links {
@@ -1830,7 +1852,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .sixmobile-search-container  .quick-links {
@@ -1842,7 +1864,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .sevenmobile-search-container  .quick-links {
@@ -1854,7 +1876,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .eightmobile-search-container  .quick-links {
@@ -1866,7 +1888,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
      .ninemobile-search-container  .quick-links {
@@ -1878,7 +1900,7 @@ desktop-nav li:nth-of-type(1),
        opacity: 0;
        pointer-events: none;
        top: 10px;
-       transition: all 400ms ease;
+       /*transition: all 400ms ease;*/
     }
 
     .mobile-search-container .quick-links ul {
@@ -2221,7 +2243,7 @@ desktop-nav li:nth-of-type(1),
 
 /* Nav Animation */
 .nav-container nav {
-    transition: all 400ms ease;
+    /*transition: all 400ms ease;*/
 }
 
 input, 
@@ -2967,6 +2989,12 @@ background-color: #201E43;
   background-color: #201E43;
   color: #fff;
   outline: 1px solid var(--accent-color);
+}
+
+.apply-button:focus {
+  border-style: solid;
+  border-width: 5px;
+  border-color: rgb(180, 214, 228);
 }
 
 
