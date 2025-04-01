@@ -1075,8 +1075,10 @@ function addFocusWrap() {
     // Enable focus locking for the submenu of the mobile navigation
     lastLI.addEventListener('focusout', function () {
       //console.log('Blur event encountered on last item in mobile submenu');
-      firstLI.setAttribute('tabindex', '0');
-      firstLI.focus(); 
+      if (navContainer.classList.contains("active")) { 
+         firstLI.setAttribute('tabindex', '0');
+         firstLI.focus();
+      } 
     });
 }
 

@@ -217,6 +217,11 @@ nav .desktop-nav.hidden {
   /*visibility: hidden;*/
 }
 
+/* enforce list items not shown so they won't receive focused */
+.hide ul li {
+  visibility: hidden;
+}
+
 .col-lg-4.learn-more {
   position: relative;
 }
