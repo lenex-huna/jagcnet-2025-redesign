@@ -674,10 +674,26 @@ closeButton.addEventListener('click', () => {
     overlay.classList.remove('show');
 });
 
+closeButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    searchContainer.classList.add('hide');
+    overlay.classList.remove('show');
+  }
+});
+
 firstCloseButton.addEventListener('click', () => {
     desktopNav.classList.remove('hide');
     firstLinkClass.classList.add('hide');
     overlay.classList.remove('show');
+});
+
+firstCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    firstLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
 });
 
 secondCloseButton.addEventListener('click', () => {
@@ -685,10 +701,27 @@ secondCloseButton.addEventListener('click', () => {
     secondLinkClass.classList.add('hide');
     overlay.classList.remove('show');
 });
+
+secondCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    secondLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
+});
+
 thirdCloseButton.addEventListener('click', () => {
     desktopNav.classList.remove('hide');
     thirdLinkClass.classList.add('hide');
     overlay.classList.remove('show');
+});
+
+thirdCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    thirdLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
 });
 
 fourthCloseButton.addEventListener('click', () => {
@@ -697,10 +730,26 @@ fourthCloseButton.addEventListener('click', () => {
     overlay.classList.remove('show');
 });
 
+fourthCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    fourthLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
+});
+
 fiveCloseButton.addEventListener('click', () => {
     desktopNav.classList.remove('hide');
     fiveLinkClass.classList.add('hide');
     overlay.classList.remove('show');
+});
+
+fiveCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    fiveLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
 });
 
 sixCloseButton.addEventListener('click', () => {
@@ -709,10 +758,26 @@ sixCloseButton.addEventListener('click', () => {
     overlay.classList.remove('show');
 });
 
+sixCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    sixLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
+});
+
 sevenCloseButton.addEventListener('click', () => {
     desktopNav.classList.remove('hide');
     sevenLinkClass.classList.add('hide');
     overlay.classList.remove('show');
+});
+
+sevenCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    sevenLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
 });
 
 eightCloseButton.addEventListener('click', () => {
@@ -721,10 +786,26 @@ eightCloseButton.addEventListener('click', () => {
     overlay.classList.remove('show');
 });
 
+eightCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    eightLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
+});
+
 nineCloseButton.addEventListener('click', () => {
     desktopNav.classList.remove('hide');
     nineLinkClass.classList.add('hide');
     overlay.classList.remove('show');
+});
+
+nineCloseButton.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    desktopNav.classList.remove('hide');
+    nineLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
+  }
 });
 
 
@@ -886,7 +967,7 @@ secondCancelBtn.addEventListener("click", () => {
     
 });
 
-secondCancelBtn.addEventListener('keypress', () => {
+secondCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       secondsearchBar.classList.remove("active");
@@ -908,7 +989,7 @@ thirdCancelBtn.addEventListener("click", () => {
     
 });
 
-thirdCancelBtn.addEventListener('keypress', () => {
+thirdCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       thirdsearchBar.classList.remove("active");
@@ -930,7 +1011,7 @@ fourthCancelBtn.addEventListener("click", () => {
     
 });
 
-fourthCancelBtn.addEventListener('keypress', () => {
+fourthCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       fourthsearchBar.classList.remove("active");
@@ -962,7 +1043,7 @@ sixCancelBtn.addEventListener("click", () => {
     
 });
 
-sixCancelBtn.addEventListener('keypress', () => {
+sixCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       sixsearchBar.classList.remove("active");
@@ -984,7 +1065,7 @@ sevenCancelBtn.addEventListener("click", () => {
     
 });
 
-sevenCancelBtn.addEventListener('keypress', () => {
+sevenCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       sevensearchBar.classList.remove("active");
@@ -1006,7 +1087,7 @@ eightCancelBtn.addEventListener("click", () => {
     
 });
 
-eightCancelBtn.addEventListener('keypress', () => {
+eightCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       eightsearchBar.classList.remove("active");
@@ -1028,7 +1109,7 @@ nineCancelBtn.addEventListener("click", () => {
     
 });
 
-nineCancelBtn.addEventListener('keypress', () => {
+nineCancelBtn.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       mobileSearchContainer.classList.remove('hide')
       ninesearchBar.classList.remove("active");
@@ -1136,12 +1217,12 @@ window.addEventListener('resize', function (e) {
 
 // Enable focus locking/wrapping for the 1st level menu of the mobile navigation
 document.getElementsByClassName('ten-search')[0].addEventListener('blur', function () {
-  console.log('Blur event encountered on last item');
   if (navContainer.classList.contains("active")) { 
     //document.getElementById('tab-search').focus(); 
     // wrap back to the cancel/back button
     document.getElementsByClassName("menu-icon-container")[0].focus();
   }
+  document.getElementsByClassName("menu-icon-container")[0].focus();
 });
 
 let desktopSubMenuCloseButtons = document.getElementsByClassName('desktop-submenu-close');
@@ -1157,8 +1238,13 @@ let subMenuElems = document.getElementsByClassName('has-submenu');
     subMenuElems[i].addEventListener('click', function () { 
 
       // this is for mobile version of the nav
-      
-      addFocusWrap('mobile');  
+      if (navContainer.classList.contains("active")) { 
+        addFocusWrap('mobile'); 
+      } 
+      else {
+        addFocusWrap('desktop');
+      }
+       
     });
   }
 
@@ -1167,23 +1253,36 @@ function addFocusWrap(type) {
 
   let activeFlag = (type == 'mobile') ? '.active' : '';
   
-    const lastLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:last-child");
-    const firstLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:first-child");
   
+  // when a mobile nav menu is opened, the focus should be on cancel/back button
+  if (navContainer.classList.contains("active")) {
 
-    // when a menu is opened, the focus should be on cancel/back button
-  let subCancelBtn = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links > ul > li:nth-child(1)").closest(".quick-links").querySelector("span.cancel-btn");
-  subCancelBtn.setAttribute('tabindex', '0');
-  subCancelBtn.focus();
+    let lastLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:last-child");
+    //let firstLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:first-child");
+
+    let subCancelBtn = document.querySelector("body > div.nav-container" + activeFlag + " > div:not(.hide) > div.quick-links > ul > li:nth-child(1)").closest(".quick-links").querySelector("span.cancel-btn");
+    subCancelBtn.setAttribute('tabindex', '0');
+    subCancelBtn.focus();
     // Enable focus locking for the submenu of the mobile navigation
     lastLI.addEventListener('focusout', function () {
-      //console.log('Blur event encountered on last item in mobile submenu');
-      
-      if (navContainer.classList.contains("active")) { 
-        //firstLI.focus();
-        subCancelBtn.focus();
-      } 
+      subCancelBtn.focus();
     });
+  }
+  else {
+    
+    let lastLI = document.querySelector(".search-container:not(.hide) > div.quick-links > ul > li:last-child > a");
+
+    //let subCancelBtn = document.querySelector("div.desktop-submenu-close > div.quick-links > ul > li:last-child").closest(".quick-links").querySelector("div.desktop-submenu-close");
+    let subCancelBtn = document.querySelector(".search-container:not(.hide) > div.quick-links > ul > li:last-child > a").closest(".quick-links").querySelector("div.desktop-submenu-close");
+  
+    subCancelBtn.setAttribute('tabindex', '0');
+    subCancelBtn.focus();
+
+    lastLI.addEventListener('blur', function () {
+      subCancelBtn.focus();
+    });
+
+  }
 }
 
 
