@@ -781,6 +781,7 @@ menuIconContainer.addEventListener('keypress', function (e) {
     }
 });
 
+
 // Elements from the DOM
 const searchBar = document.querySelector('.mobile-search-container .search-bar');
 
@@ -837,6 +838,7 @@ const eightmobileSearch = document.querySelector('.eightmobile-search-container'
 const ninemobileSearch = document.querySelector('.ninemobile-search-container')
 
 
+
 searchInput.addEventListener("click", () => {
     searchBar.classList.add("active");
     // nav.classList.add("move-up");
@@ -852,6 +854,7 @@ cancelBtn.addEventListener("click", () => {
     desktopNav.classList.remove('hide');
 });
 
+
 firstCancelBtn.addEventListener("click", () => {
     mobileSearchContainer.classList.remove('hide')
     firstsearchBar.classList.remove("active");
@@ -862,6 +865,17 @@ firstCancelBtn.addEventListener("click", () => {
     
 });
 
+firstCancelBtn.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      firstsearchBar.classList.remove("active");
+      firstmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
+});
+
 secondCancelBtn.addEventListener("click", () => {
     mobileSearchContainer.classList.remove('hide')
     secondsearchBar.classList.remove("active");
@@ -869,6 +883,18 @@ secondCancelBtn.addEventListener("click", () => {
     nav.classList.remove('move-up');
     desktopNav.classList.remove('move-down');
     desktopNav.classList.remove('hide');
+    
+});
+
+secondCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      secondsearchBar.classList.remove("active");
+      secondmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
     
 });
 
@@ -882,6 +908,18 @@ thirdCancelBtn.addEventListener("click", () => {
     
 });
 
+thirdCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      thirdsearchBar.classList.remove("active");
+      thirdmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
+    
+});
+
 fourthCancelBtn.addEventListener("click", () => {
     mobileSearchContainer.classList.remove('hide')
     fourthsearchBar.classList.remove("active");
@@ -889,6 +927,18 @@ fourthCancelBtn.addEventListener("click", () => {
     nav.classList.remove('move-up');
     desktopNav.classList.remove('move-down');
     desktopNav.classList.remove('hide');
+    
+});
+
+fourthCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      fourthsearchBar.classList.remove("active");
+      fourthmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
     
 });
 
@@ -912,6 +962,18 @@ sixCancelBtn.addEventListener("click", () => {
     
 });
 
+sixCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      sixsearchBar.classList.remove("active");
+      sixmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
+    
+});
+
 sevenCancelBtn.addEventListener("click", () => {
     mobileSearchContainer.classList.remove('hide')
     sevensearchBar.classList.remove("active");
@@ -919,6 +981,18 @@ sevenCancelBtn.addEventListener("click", () => {
     nav.classList.remove('move-up');
     desktopNav.classList.remove('move-down');
     desktopNav.classList.remove('hide');
+    
+});
+
+sevenCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      sevensearchBar.classList.remove("active");
+      sevenmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
     
 });
 
@@ -932,6 +1006,18 @@ eightCancelBtn.addEventListener("click", () => {
     
 });
 
+eightCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      eightsearchBar.classList.remove("active");
+      eightmobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
+    
+});
+
 nineCancelBtn.addEventListener("click", () => {
     mobileSearchContainer.classList.remove('hide')
     ninesearchBar.classList.remove("active");
@@ -939,6 +1025,18 @@ nineCancelBtn.addEventListener("click", () => {
     nav.classList.remove('move-up');
     desktopNav.classList.remove('move-down');
     desktopNav.classList.remove('hide');
+    
+});
+
+nineCancelBtn.addEventListener('keypress', () => {
+    if (e.key === 'Enter') {
+      mobileSearchContainer.classList.remove('hide')
+      ninesearchBar.classList.remove("active");
+      ninemobileSearch.classList.add('hide')
+      nav.classList.remove('move-up');
+      desktopNav.classList.remove('move-down');
+      desktopNav.classList.remove('hide');
+    }
     
 });
 
@@ -1035,49 +1133,55 @@ window.addEventListener('resize', function (e) {
   }
 });
 
-// event handler for when the mobile nav container detects any clicks, 
-// we ensure proper wrapping for focusable elements that are displayed
-navContainer.addEventListener('click', function (e) {
-  if (navContainer.classList.contains("active")) {
-    // wrap this first layer of menu options for wrapped tabbing, and 'hide' the submenu options from focus
-    //addFocusWrapper(navContainer);
-    }
-});
 
-// at the top level of the mobile nav, wrap the desktop-nav ul class and its li elements after the 1st li
-function addFocusWrapper(container) {
-  
-}
-
-// Enable focus locking for the 1st level menu of the mobile navigation
-document.getElementsByClassName('nine-search')[0].addEventListener('blur', function () {
+// Enable focus locking/wrapping for the 1st level menu of the mobile navigation
+document.getElementsByClassName('ten-search')[0].addEventListener('blur', function () {
   console.log('Blur event encountered on last item');
   if (navContainer.classList.contains("active")) { 
-    document.getElementById('tab-search').focus(); 
+    //document.getElementById('tab-search').focus(); 
+    // wrap back to the cancel/back button
+    document.getElementsByClassName("menu-icon-container")[0].focus();
   }
 });
 
-// On the mobile menu, add event listeners to all items that open up a sub-menu
+let desktopSubMenuCloseButtons = document.getElementsByClassName('desktop-submenu-close');
+for (let y = 0; y < desktopSubMenuCloseButtons.length; y++) {
+  desktopSubMenuCloseButtons[y].setAttribute('tabindex', '0');    
+}
+
+// On the mobile and desktop menus, add event listeners to all items that open up a sub-menu
 // Then we add focus-wrap functionality to each item's sub-menu
 let subMenuElems = document.getElementsByClassName('has-submenu');
 
   for (let i = 0; i < subMenuElems.length; i++) {
     subMenuElems[i].addEventListener('click', function () { 
-      addFocusWrap();  
+
+      // this is for mobile version of the nav
+      
+      addFocusWrap('mobile');  
     });
   }
 
 // For a given list, when the last list items is focused out, return focus to the first list item 
-function addFocusWrap() {
-    const lastLI = document.querySelector("body > div.nav-container.active > div:not(.hide) > div.quick-links ul li:last-child");
-    const firstLI = document.querySelector("body > div.nav-container.active > div:not(.hide) > div.quick-links ul li:first-child");
+function addFocusWrap(type) {
 
+  let activeFlag = (type == 'mobile') ? '.active' : '';
+  
+    const lastLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:last-child");
+    const firstLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:first-child");
+  
+
+    // when a menu is opened, the focus should be on cancel/back button
+  let subCancelBtn = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links > ul > li:nth-child(1)").closest(".quick-links").querySelector("span.cancel-btn");
+  subCancelBtn.setAttribute('tabindex', '0');
+  subCancelBtn.focus();
     // Enable focus locking for the submenu of the mobile navigation
     lastLI.addEventListener('focusout', function () {
       //console.log('Blur event encountered on last item in mobile submenu');
+      
       if (navContainer.classList.contains("active")) { 
-         firstLI.setAttribute('tabindex', '0');
-         firstLI.focus();
+        //firstLI.focus();
+        subCancelBtn.focus();
       } 
     });
 }
