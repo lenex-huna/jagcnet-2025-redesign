@@ -954,6 +954,8 @@ firstCancelBtn.addEventListener('keypress', function (e) {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+    
+      menuIconContainer.focus(); // when a user closes this submenu, focus goes back to the main nav close button
     }
 });
 
@@ -965,6 +967,7 @@ secondCancelBtn.addEventListener("click", () => {
     desktopNav.classList.remove('move-down');
     desktopNav.classList.remove('hide');
     
+    
 });
 
 secondCancelBtn.addEventListener('keypress', (e) => {
@@ -975,6 +978,8 @@ secondCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -997,6 +1002,8 @@ thirdCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1019,6 +1026,8 @@ fourthCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1051,6 +1060,8 @@ sixCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1073,6 +1084,8 @@ sevenCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1095,6 +1108,8 @@ eightCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1117,6 +1132,8 @@ nineCancelBtn.addEventListener('keypress', (e) => {
       nav.classList.remove('move-up');
       desktopNav.classList.remove('move-down');
       desktopNav.classList.remove('hide');
+
+      menuIconContainer.focus();
     }
     
 });
@@ -1201,7 +1218,7 @@ function updateSwiperTabsPagination(swiperInstance, customDots) {
 // window.addEventListener("load", initSwiperTabs);
 initSwiperTabs();
 
-// event handler for detecting screen width changes for closing the mobile nav menu when screen width changes
+// event handler for detecting screen width changes for closing the mobile nav menus and open desktop submenus when screen width changes
 window.addEventListener('resize', function (e) {
 
   //let mobileLogo = document.querySelector('.new-mobile-logo');
@@ -1212,6 +1229,18 @@ window.addEventListener('resize', function (e) {
   if (mobileLogo.classList.contains('active')) {
      mobileLogo.classList.remove('active');
   }
+
+    //desktopNav.classList.remove('hide');
+    searchContainer.classList.add('hide');
+    firstLinkClass.classList.add('hide');
+    secondLinkClass.classList.add('hide');
+    thirdLinkClass.classList.add('hide');
+    fourthLinkClass.classList.add('hide');
+    fiveLinkClass.classList.add('hide'); 
+    sixLinkClass.classList.add('hide');
+    sevenLinkClass.classList.add('hide');
+    eightLinkClass.classList.add('hide');
+    overlay.classList.remove('show');
 });
 
 
