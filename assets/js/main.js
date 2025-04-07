@@ -507,6 +507,7 @@ secondSearch.addEventListener('click', () => {
     sixLink.classList.add('hide');
     sevenLink.classList.add('hide');
     eightLink.classList.add('hide');
+    nineLink.classList.add('hide');
     overlay.classList.add('show');
     }
 });
@@ -530,6 +531,7 @@ thirdSearch.addEventListener('click', () => {
     sixLink.classList.add('hide');
     sevenLink.classList.add('hide');
     eightLink.classList.add('hide');
+    nineLink.classList.add('hide');
   overlay.classList.add('show');
    }
 });
@@ -545,13 +547,14 @@ fourthSearch.addEventListener('click', () => {
     //  desktopNav.classList.add('hide');
     fourthLink.classList.remove('hide');
     searchContainer.classList.add('hide');
-     firstLink.classList.add('hide');
+    firstLink.classList.add('hide');
     secondLink.classList.add('hide');
     thirdLink.classList.add('hide')
     fiveLink.classList.add('hide');
     sixLink.classList.add('hide');
     sevenLink.classList.add('hide');
     eightLink.classList.add('hide');
+    nineLink.classList.add('hide');
     overlay.classList.add('show');
    }
 });
@@ -639,7 +642,8 @@ eightSearch.addEventListener('click', () => {
     fourthLink.classList.add('hide');
     fiveLink.classList.add('hide');
     sixLink.classList.add('hide');
-     sevenLink.classList.add('hide');
+    sevenLink.classList.add('hide');
+    nineLink.classList.add('hide');
     overlay.classList.add('show');
    }
 });
@@ -661,7 +665,8 @@ nineSearch.addEventListener('click', () => {
     fourthLink.classList.add('hide');
     fiveLink.classList.add('hide');
     sixLink.classList.add('hide');
-     sevenLink.classList.add('hide');
+    sevenLink.classList.add('hide');
+    eightLink.classList.add('hide');
     overlay.classList.add('show');
    }
 });
@@ -826,7 +831,8 @@ overlay.addEventListener('click', () => {
 
 
 // code for Match-media
-var x = window.matchMedia("(max-width: 768px)")
+// old max-width: 768px
+var x = window.matchMedia("(max-width: 840px)");
 
 
 // Mobile Version
@@ -1218,7 +1224,7 @@ function updateSwiperTabsPagination(swiperInstance, customDots) {
 // window.addEventListener("load", initSwiperTabs);
 initSwiperTabs();
 
-// event handler for detecting screen width changes for closing the mobile nav menus and open desktop submenus when screen width changes
+// event handler for detecting screen width changes for closing the mobile nav menus + submenus and any open desktop submenus when screen width changes
 window.addEventListener('resize', function (e) {
 
   //let mobileLogo = document.querySelector('.new-mobile-logo');
@@ -1230,17 +1236,41 @@ window.addEventListener('resize', function (e) {
      mobileLogo.classList.remove('active');
   }
 
-    //desktopNav.classList.remove('hide');
-    searchContainer.classList.add('hide');
-    firstLinkClass.classList.add('hide');
-    secondLinkClass.classList.add('hide');
-    thirdLinkClass.classList.add('hide');
-    fourthLinkClass.classList.add('hide');
-    fiveLinkClass.classList.add('hide'); 
-    sixLinkClass.classList.add('hide');
-    sevenLinkClass.classList.add('hide');
-    eightLinkClass.classList.add('hide');
-    overlay.classList.remove('show');
+  //desktopNav.classList.remove('hide');
+  searchContainer.classList.add('hide');
+  firstLinkClass.classList.add('hide');
+  secondLinkClass.classList.add('hide');
+  thirdLinkClass.classList.add('hide');
+  fourthLinkClass.classList.add('hide');
+  fiveLinkClass.classList.add('hide'); 
+  sixLinkClass.classList.add('hide');
+  sevenLinkClass.classList.add('hide');
+  eightLinkClass.classList.add('hide');
+  nineLinkClass.classList.add('hide');
+  overlay.classList.remove('show');
+  
+  mobileSearchContainer.classList.remove('hide')
+  firstsearchBar.classList.remove("active");
+  firstmobileSearch.classList.add('hide');
+  secondsearchBar.classList.remove("active");
+  secondmobileSearch.classList.add('hide');
+  thirdsearchBar.classList.remove("active");
+  thirdmobileSearch.classList.add('hide');
+  fourthsearchBar.classList.remove("active");
+  fourthmobileSearch.classList.add('hide');
+  sixsearchBar.classList.remove("active");
+  sixmobileSearch.classList.add('hide');
+  sevensearchBar.classList.remove("active");
+  sevenmobileSearch.classList.add('hide');
+  eightsearchBar.classList.remove("active");
+  eightmobileSearch.classList.add('hide');
+  ninesearchBar.classList.remove("active");
+  ninemobileSearch.classList.add('hide');
+
+  nav.classList.remove('move-up');
+  desktopNav.classList.remove('move-down');
+  desktopNav.classList.remove('hide');
+  
 });
 
 

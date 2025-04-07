@@ -759,54 +759,44 @@ desktop-nav li:nth-of-type(1),
 .search-container .link-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .firstLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .secondLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .thirdLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .fourthLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .fiveLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .sixLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 .search-container .sevenLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 
 .search-container .eightLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 
 .search-container .nineLink-close {
     opacity: 0.5;
     transition: all 400ms ease;
-    transition-delay: 400ms;
 }
 
 .search-container.hide .quick-links h2 {
@@ -2305,7 +2295,7 @@ a {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    /*transition: 0.3s;*/
   }
 
   .navmenu a i,
@@ -2807,7 +2797,8 @@ a {
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
+/* previous max-width: 768px */
+@media screen and (max-width: 840px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
@@ -3215,7 +3206,8 @@ figure.center {
   padding: 140px 0 60px 0;
 }
 
-@media (max-width: 768px),
+/* previous max-width: 768px */
+@media (max-width: 840px),
 (max-height: 480px) {
   .hero .info {
     padding: 100px 50px 60px 50px;
@@ -3251,7 +3243,8 @@ figure.center {
 }
 }
 
-@media (max-width: 768px) {
+/* previous max-width: 768px */
+@media (max-width: 840px) {
   .hero .info h2 {
     font-size: 36px;
     
@@ -3571,7 +3564,8 @@ section h2 img.memoriam {
 
 }
 
-@media(max-width: 768px) {
+/* previous max-width: 768px */
+@media(max-width: 840px) {
   .col-lg-4 .cropped-img2 {
     max-width: 100%;
     height: auto;
@@ -5267,8 +5261,8 @@ grid-row-gap: 10px;
 } 
 
 
-
-@media (min-width: 768px) {
+/* previous max-width: 768px */
+@media (min-width: 840px) {
   .button-54 {
     padding: 0.25em 0.75em;
   }
@@ -5541,7 +5535,8 @@ grid-row-gap: 0px;
 }
 }
 
-@media (max-width: 768px) {
+4
+@media (max-width: 840px) {
   .recent-posts .post-author-img {
     /* width: 50px; */
     width: 50px;
@@ -6247,7 +6242,8 @@ section ol.custom-order p a {
 }
 }
 
-@media (max-width: 768px) {
+/* previous max-width: 768px */
+@media (max-width: 840px) {
 
    .special-header h2 {
       font-size: 15px;
