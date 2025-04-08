@@ -5585,11 +5585,13 @@ ul.judical li {
 /*--------------------------------------------------------------
 # Blog Posts Section
 --------------------------------------------------------------*/
+
 .blog-posts.section {
   margin-top: 0px;
   padding-top: 0px;
-  border-top: 1px solid black;
+  /*border-top: 1px solid black;*/
 }
+
 
 .featured-links-section {
   text-align: center;
