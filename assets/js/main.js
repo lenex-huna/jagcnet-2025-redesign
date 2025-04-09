@@ -1317,10 +1317,10 @@ function addFocusWrap(type) {
   // when a mobile nav menu is opened, the focus should be on cancel/back button
   if (navContainer.classList.contains("active")) {
 
-    let lastLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:last-child");
+    let lastLI = document.querySelector("body div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:last-child");
     //let firstLI = document.querySelector("body > div.nav-container"+activeFlag+" > div:not(.hide) > div.quick-links ul li:first-child");
 
-    let subCancelBtn = document.querySelector("body > div.nav-container" + activeFlag + " > div:not(.hide) > div.quick-links > ul > li:nth-child(1)").closest(".quick-links").querySelector("span.cancel-btn");
+    let subCancelBtn = document.querySelector("body div.nav-container" + activeFlag + " > div:not(.hide) > div.quick-links > ul > li:nth-child(1)").closest(".quick-links").querySelector("span.cancel-btn");
     subCancelBtn.setAttribute('tabindex', '0');
     subCancelBtn.focus();
     // Enable focus locking for the submenu of the mobile navigation
