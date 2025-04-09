@@ -483,6 +483,7 @@ tabSearch.addEventListener('click', () => {
       sixLink.classList.add('hide');
       sevenLink.classList.add('hide');
       eightLink.classList.add('hide');
+      nineLink.classList.add('hide');
         overlay.classList.add('show');
     }
 
