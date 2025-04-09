@@ -17,6 +17,12 @@ Rieger/**
   --nav-font: "Poppins",  sans-serif;
 }
 
+/* Include the GI font locally */
+@font-face {
+  font-family: 'GI';
+  src: url('../fonts/G.I.-400.woff2') format('woff2');
+}
+
 @font-face {
     font-display: block;
     font-family: armyicons;
