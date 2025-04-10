@@ -5967,7 +5967,7 @@ ul.judical li {
 }
 
 .card_container .card {
-    max-width: 530px;
+    /*max-width: 530px;*/
     margin-top: 10px;
     border-radius: 20px;
     background: #1e293b;
@@ -5995,6 +5995,7 @@ grid-column-gap: 35px;
 
 
 .user_content .name{
+    width: 45%; /*have the names adjust when the screen width changes*/
     font-size: 20px;
     color: #fff;
 }
@@ -6007,6 +6008,7 @@ grid-column-gap: 35px;
     
     position: relative;
     left: 16px;
+    width: 40%;
 }
 
 .user_content .post::before{
@@ -6416,4 +6418,11 @@ height: 100%;
 height: 750px;
 }
 
+}
+
+@media(max-width: 830px) {
+  .main .card_container {
+    display: block;
+    max-width: 80%;
+  }
 }
