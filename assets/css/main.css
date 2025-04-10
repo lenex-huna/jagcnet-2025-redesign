@@ -5222,7 +5222,7 @@ grid-row-gap: 10px;
 
 /* CSS button 54*/
 .button-54 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "GI", "Open Sans", sans-serif;
   font-size: 12px; /* prev: 16px, set lower to account for text cluttering at tablet width*/
   letter-spacing: 2px;
   text-decoration: none;
@@ -6420,9 +6420,17 @@ height: 750px;
 
 }
 
+/* Styling for leadership profile cards to display without titles being obscured*/
 @media(max-width: 830px) {
   .main .card_container {
     display: block;
     max-width: 80%;
   }
+}
+
+
+/*-----Legal Services design styles--------------------------------------------------------*/
+
+.image-overlay-bg {
+  width: 100%;
 }

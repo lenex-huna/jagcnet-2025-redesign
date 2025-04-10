@@ -991,4 +991,4 @@ class NavHeader extends HTMLElement {
   }
 }
 
-customElements.define('nav-header', NavHeader);
+customElements.define('nav-header', NavHeader)
