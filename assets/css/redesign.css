@@ -1,0 +1,107 @@
+ html,
+ body, #team {
+    background-color: black;
+}
+
+#team1 {
+    color: white;
+    height: 100%;
+    background-image: url("../assets/img/placeHolders/flagBackDrop.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.main {
+    background-color: black;
+    color: white;
+}
+
+.container h2 {
+    color: #FFCC01;
+}
+
+.service-details {
+    background: none;
+    color: white;
+}
+
+#service-details2 {
+    background: black;
+    color: white;
+}
+
+.service-details p.new-title,
+.section-title p.leader-style {
+    color: white;
+}
+
+
+
+.button-54 {
+    box-shadow: none;
+    border: 1px solid;
+    background-color: transparent;
+}
+
+.button-54:hover {
+    background-color: rgba(255, 204, 1, 0.5);
+    transition: 0.7s;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion-item .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 204, 1, 0.5);
+}
+
+.accordion-button:not(.collapsed),
+.service-details .service-box {
+    background-color: transparent;
+}
+
+.service-details .services-list a:hover {
+    background-color: rgba(255, 204, 1, 0.5);
+}
+
+#main2 {
+    margin-top: 160px;
+}
+
+.fraud-table {
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.fraud-table p.leader-style {
+    padding: 25px;
+    text-align: center;
+    border: 1px solid white;
+}
+
+
+
+/*
+.fraud-table .section-title p.leader-style {
+    border: 1px solid;
+}
+*/
+
+.section-title p.leader-style a {
+    color: #FFCC01;
+}
+
+@media(max-width: 575px) {
+
+    .section-title>h2,
+    .section-title>h2::after {
+        display: none;
+    }
+
+    .service-details p.new-title {
+        margin-top: 10%;
+    }
+}
