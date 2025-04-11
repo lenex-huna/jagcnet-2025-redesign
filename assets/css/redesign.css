@@ -1,6 +1,7 @@
  html,
  body, #team {
     background-color: black;
+    color: white;
 }
 
 #team1 {
@@ -23,6 +24,10 @@
 
 .service-details {
     background: none;
+    color: white;
+}
+
+.service-details p {
     color: white;
 }
 

@@ -4706,7 +4706,7 @@ section.service-details {
 
 .service-details .services-list a:hover i {
   color: #fff;
-  transition: all 0.4s ease 0s;
+  /*transition: all 0.4s ease 0s;*/
   
 }
 
@@ -4718,8 +4718,10 @@ color: #ffffff !important;
 /* background: #e05915; */
 background: #d9a918;
 border-color: #f6b93b !important;
+/*
 transition: all 0.4s ease 0s;
 font-size: 2rem;
+*/
 }
 
 
