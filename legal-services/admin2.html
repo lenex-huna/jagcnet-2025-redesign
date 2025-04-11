@@ -29,11 +29,16 @@
     <!-- Main CSS File -->
     <link href="../assets/css/main.css" rel="stylesheet">
     <style>
+        html,
+        body {
+            background-color: black;
+        }
+
         #team1 {
             color: white;
             height: 100%;
             background-image: url("../assets/img/placeHolders/flagBackDrop.png");
-            background-repeat: no-repeat;
+            background-repeat: repeat;
             background-attachment: fixed;
         }
 
@@ -94,6 +99,10 @@
 
         .service-details .services-list a:hover {
             background-color: rgba(255, 204, 1, 0.5);
+        }
+
+        #main2 {
+            margin-top: 160px;
         }
 
         .fraud-table {
@@ -378,7 +387,7 @@
     </main>
 
     <!-- New Section Starts Here -->
-    <main class="main">
+    <main class="main" id="main2">
         <section id="team2" class="team section procurement">
             <div class="container section-title" data-aos="fade-up">
                 <section id="service-details2" class="service-details section my-procurement">
